@@ -37,6 +37,10 @@ public class MenuActivity extends AppCompatActivity {
             if(names!=null){
                 Toast.makeText(getApplicationContext(),"전달받은 이름 리스트 개수 : "+names.size(),Toast.LENGTH_SHORT).show();
             }
+            SimpleData data=(SimpleData)intent.getParcelableExtra("data");
+            if(data!=null){
+                Toast.makeText(getApplicationContext(),"전달받은 SimpleData : "+data.message,Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }
